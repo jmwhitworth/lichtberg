@@ -10,9 +10,12 @@
 	"textdomain": "lichtberg",
 	"editorScript": "file:./index.js",
 	"attributes": {
-		"width": {
-			"type": "string",
-			"default": "100"
+		"flex": {
+			"type": "object",
+			"default": {
+				"direction": "col",
+				"gap": "4"
+			}
 		}
 	}
 }

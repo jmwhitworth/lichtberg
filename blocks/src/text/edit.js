@@ -2,7 +2,9 @@ import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-edi
 import { PanelBody, SelectControl } from '@wordpress/components';
 
 export default function Edit({ attributes, setAttributes }) {
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: "text-base"
+	});
  
 	return (
 		<>
