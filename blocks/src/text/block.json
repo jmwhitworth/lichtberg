@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "lichtberg/text",
+	"version": "1.0.0",
+	"title": "Text",
+	"category": "lichtberg",
+	"icon": "text",
+	"description": "A text area block for text-based content",
+	"textdomain": "lichtbergggg",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"default": ""
+		},
+		"placeholder": {
+			"type": "string",
+			"default": "Enter text..."
+		},
+		"tagType": {
+			"type": "string",
+			"default": "p"
+		},
+		"align": {
+			"type": "string",
+			"default": "left"
+		}
+	},
+	"editorScript": "file:./index.js"
+}
