@@ -3,7 +3,7 @@
  * Plugin Name:       Lichtberg
  * Description:       A collection of lightweight blocks
  * Requires at least: 6.1
- * Requires PHP:      7.0
+ * Requires PHP:      8.2
  * Version:           1.0.0
  * Author:            Jack Whitworth
  * License:           GPL-2.0-or-later

@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied inside the editor and the front end.
+ */
+
+.wplb-text {
+	&__left {
+		text-align: left;
+	}
+	&__center {
+		text-align: center;
+	}
+	&__right {
+		text-align: right;
+	}
+}

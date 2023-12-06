@@ -1,9 +1,9 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
-import CreateClasses from './createClasses';
+//import createClasses from './createClasses';
 
 export default function Save({ attributes }) {
 	const blockProps = useBlockProps.save({
-		className: CreateClasses({ attributes })
+		//className: createClasses({ attributes })
 	});
 	
 	return React.createElement(

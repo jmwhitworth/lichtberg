@@ -9,13 +9,6 @@
   "description": "A container to nest other blocks",
   "textdomain": "lichtberg",
   "editorScript": "file:./index.js",
-  "attributes": {
-    "flex": {
-      "type": "object",
-      "default": {
-        "direction": "col",
-        "gap": "4"
-      }
-    }
-  }
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
 }
