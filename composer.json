@@ -1,0 +1,10 @@
+{
+    "name": "jmwhitworth/lichtberg",
+    "type": "wordpress-plugin",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.jackwhitworth.com"
+        }
+    ]
+}
