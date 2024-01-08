@@ -53,6 +53,7 @@ if ( !function_exists('\lichtberg\registerBlocks') ) {
     {
         // Blockname => Callback ?? ''
         $blocks = [
+            'card' => '',
             'container' => '',
             'text' => '',
         ];
@@ -76,6 +77,7 @@ if ( !function_exists('\lichtberg\registerBlocks') ) {
 function allowOnlyLichtbergBlocks(): array
 {
     return [
+		'lichtberg/card',
 		'lichtberg/container',
 		'lichtberg/text',
     ];

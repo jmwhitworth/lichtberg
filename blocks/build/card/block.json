@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lichtberg/card",
+  "version": "1.0.0",
+  "title": "Card",
+  "category": "lichtberg",
+  "icon": "index-card",
+  "description": "An image with a title and caption",
+  "textdomain": "lichtberg",
+  "attributes": {
+    "image": {
+      "type": "object",
+      "default": {
+        "url": "",
+        "alt": "",
+        "id": 0
+      }
+    },
+    "heading": {
+      "type": "object",
+      "default": {
+        "tag": "h4",
+        "text": "",
+        "placeholder": "Title..."
+      }
+    },
+    "body": {
+      "type": "object",
+      "default": {
+        "tag": "p",
+        "text": "",
+        "placeholder": "Body text here..."
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css"
+}
