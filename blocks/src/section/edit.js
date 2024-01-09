@@ -6,7 +6,7 @@ import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps({
-		className: generateClasses(attributes.style, attributes.options.classBaseName)
+		className: generateClasses(attributes.style, attributes.classBaseName)
 	});
 	
 	return (
@@ -14,12 +14,6 @@ export default function Edit({ attributes, setAttributes }) {
 			<InspectorControls>
 				<PanelBody title={ __( 'Block Settings', 'lichtberg')}>
 					<StylePanel attributes={ attributes } setAttributes={ setAttributes } />
-					<SelectControl
-						label={ __( 'Padding', 'lichtberg' ) }
-						value={ attributes.padding }
-						options={ attributes.options.padding }
-						onChange={ ( value ) => setAttributes( { padding: value } ) }
-					/>
 				</PanelBody>
 			</InspectorControls>
 			

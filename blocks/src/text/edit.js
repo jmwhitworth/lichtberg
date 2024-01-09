@@ -1,12 +1,13 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls, RichText } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls, RichText, BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
 import { PanelBody, SelectControl } from '@wordpress/components';
 import { StylePanel, generateClasses } from '../lichtbergHelpers';
 import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps({
-		className: generateClasses(attributes.style, attributes.options.classBaseName)
+		className: generateClasses(attributes.style, attributes.classBaseName),
+		style: { textAlign: attributes.alignment}
 	});
 	
 	return (
@@ -17,11 +18,18 @@ export default function Edit({ attributes, setAttributes }) {
 					<SelectControl
 						label={ __( 'Tag', 'lichtberg' ) }
 						value={ attributes.tag }
-						options={ attributes.options.tag }
-						onChange={ ( value ) => setAttributes( { tag: value } ) }
+						options={ attributes.tagOptions }
+						onChange={ ( tag ) => setAttributes( { tag } ) }
 					/>
 				</PanelBody>
 			</InspectorControls>
+			
+			<BlockControls>
+				<AlignmentToolbar
+					value={ attributes.alignment }
+					onChange={ ( alignment ) => setAttributes( { alignment } ) }
+				/>
+			</BlockControls>
 			
 			<RichText
                 { ...blockProps }

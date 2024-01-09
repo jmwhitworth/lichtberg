@@ -6,16 +6,14 @@ import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps({
-		className: generateClasses(attributes.style, attributes.options.classBaseName)
+		className: generateClasses(attributes.style, attributes.classBaseName)
 	});
 	
 	const updateShortcode = (content) => {
 		let sanitizedContent = content.trim().replace(/^\[|\]$/g, '');
 		sanitizedContent = `[${sanitizedContent}]`;
-	
 		setAttributes({ content: sanitizedContent });
 	};
-	
 	
 	return (
 		<>

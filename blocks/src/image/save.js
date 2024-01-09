@@ -3,7 +3,7 @@ import { generateClasses } from '../lichtbergHelpers';
 
 export default function save({ attributes }) {
 	const blockProps = useBlockProps.save({
-		className: generateClasses(attributes.style, attributes.options.classBaseName)
+		className: generateClasses(attributes.style, attributes.classBaseName)
 	});
 	
 	return (
@@ -12,11 +12,11 @@ export default function save({ attributes }) {
 				<img
 					src={ attributes.url }
 					alt={ attributes.alt }
-					className={ `${attributes.options.classBaseName}__image` }
+					className={ `${attributes.classBaseName}__image` }
 				/>
 			) }
 			{ attributes.caption && (
-				<figcaption className={ `${attributes.options.classBaseName}__caption` }>
+				<figcaption className={ `${attributes.classBaseName}__caption` }>
 					{ attributes.caption }
 				</figcaption>
 			) }

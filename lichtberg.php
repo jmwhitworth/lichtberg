@@ -94,7 +94,22 @@ function changeBlockThemeOption($metadata): array
 {
     switch ($metadata['name']) {
         case 'lichtberg/section':
-            $metadata['attributes']['options']['default']['style'] = [
+            $metadata['attributes']['styleOptions']['default'] = [
+                [ 'label' => 'Dark', 'value' => 'dark' ]
+            ];
+            break;
+        case 'lichtberg/text':
+            $metadata['attributes']['styleOptions']['default'] = [
+                [ 'label' => 'Dark', 'value' => 'dark' ]
+            ];
+            break;
+        case 'lichtberg/shortcode':
+            $metadata['attributes']['styleOptions']['default'] = [
+                [ 'label' => 'Dark', 'value' => 'dark' ]
+            ];
+            break;
+        case 'lichtberg/image':
+            $metadata['attributes']['styleOptions']['default'] = [
                 [ 'label' => 'Dark', 'value' => 'dark' ]
             ];
             break;

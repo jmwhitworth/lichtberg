@@ -17,9 +17,13 @@
 	"style": "file:./style-index.css",
 	"viewScript": "file:./view.js",
 	"attributes": {
-		"tag": {
+		"alignment": {
 			"type": "string",
-			"default": "p"
+			"default": null
+		},
+		"classBaseName": {
+			"type": "string",
+			"default": "wp-block-lichtberg-text"
 		},
 		"content": {
 			"type": "string",
@@ -29,21 +33,25 @@
 			"type": "array",
 			"default": []
 		},
-		"options": {
-			"type": "object",
-			"default": {
-				"style": [],
-				"classBaseName": "wp-block-lichtberg-text",
-				"tag": [
-					{"label": "Paragraph", "value": "p"},
-					{"label": "Heading 1", "value": "h1"},
-					{"label": "Heading 2", "value": "h2"},
-					{"label": "Heading 3", "value": "h3"},
-					{"label": "Heading 4", "value": "h4"},
-					{"label": "Heading 5", "value": "h5"},
-					{"label": "Heading 6", "value": "h6"}
-				]
-			}
+		"styleOptions": {
+			"type": "array",
+			"default": []
+		},
+		"tag": {
+			"type": "string",
+			"default": "p"
+		},
+		"tagOptions": {
+			"type": "array",
+			"default": [
+				{"label": "Paragraph", "value": "p"},
+				{"label": "Heading 1", "value": "h1"},
+				{"label": "Heading 2", "value": "h2"},
+				{"label": "Heading 3", "value": "h3"},
+				{"label": "Heading 4", "value": "h4"},
+				{"label": "Heading 5", "value": "h5"},
+				{"label": "Heading 6", "value": "h6"}
+			]
 		}
 	}
 }

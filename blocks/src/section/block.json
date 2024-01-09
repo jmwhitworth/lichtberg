@@ -17,16 +17,17 @@
 	"style": "file:./style-index.css",
 	"viewScript": "file:./view.js",
 	"attributes": {
+		"classBaseName": {
+			"type": "string",
+			"default": "wp-block-lichtberg-section"
+		},
 		"style": {
 			"type": "array",
 			"default": []
 		},
-		"options": {
-			"type": "object",
-			"default": {
-				"style": [],
-				"classBaseName": "wp-block-lichtberg-section"
-			}
+		"styleOptions": {
+			"type": "array",
+			"default": []
 		}
 	}
 }

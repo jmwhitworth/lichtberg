@@ -3,7 +3,7 @@ import { generateClasses } from '../lichtbergHelpers';
 
 export default function save({ attributes }) {
 	const blockProps = useBlockProps.save({
-		className: generateClasses(attributes.style, attributes.options.classBaseName)
+		className: generateClasses(attributes.style, attributes.classBaseName)
 	});
 	
 	return (

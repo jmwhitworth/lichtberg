@@ -10,3 +10,4 @@
         - text
     - Setup styling so modifier classes can be added via PHP hooks for selection in the editor
 - v0.2.1: Updated README.md
+- v0.2.2: Change option attribute structure and added alignment controls for text block and caption/alt control over image block

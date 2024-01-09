@@ -17,6 +17,10 @@
   "style": "file:./style-index.css",
   "viewScript": "file:./view.js",
   "attributes": {
+    "classBaseName": {
+      "type": "string",
+      "default": "wp-block-lichtberg-shortcode"
+    },
     "content": {
       "type": "string",
       "default": "[]"
@@ -25,12 +29,9 @@
       "type": "array",
       "default": []
     },
-    "options": {
-      "type": "object",
-      "default": {
-        "style": [],
-        "classBaseName": "wp-block-lichtberg-shortcode"
-      }
+    "styleOptions": {
+      "type": "array",
+      "default": []
     }
   }
 }

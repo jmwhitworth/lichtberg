@@ -1,12 +1,12 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
-import { PanelBody, SelectControl, Button } from '@wordpress/components';
+import { useBlockProps, InspectorControls, RichText, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
+import { PanelBody, SelectControl, Button, TextControl } from '@wordpress/components';
 import { StylePanel, generateClasses } from '../lichtbergHelpers';
 import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps({
-		className: generateClasses(attributes.style, attributes.options.classBaseName)
+		className: generateClasses(attributes.style, attributes.classBaseName)
 	});
 	
 	const onSelectImage = (media) => {
@@ -31,6 +31,45 @@ export default function Edit({ attributes, setAttributes }) {
 			<InspectorControls>
 				<PanelBody title={ __( 'Block Settings', 'lichtberg') }>
 					<StylePanel attributes={ attributes } setAttributes={ setAttributes } />
+					
+					{ attributes.url ? (
+						<>
+							<TextControl
+								label={ __( 'Alt Text', 'lichtberg' ) }
+								value={ attributes.alt }
+								onChange={ ( alt ) => setAttributes( { alt } ) }
+							/>
+							<TextControl
+								label={ __( 'Caption', 'lichtberg' ) }
+								value={ attributes.caption }
+								onChange={ ( caption ) => setAttributes( { caption } ) }
+							/>
+						</>
+					) : ('')}
+					
+					<>
+						{ attributes.url ? (
+							<Button onClick={ onRemoveImage }
+								variant='link'
+								isDestructive>
+									Remove Image
+							</Button>
+						) : (
+							<MediaUploadCheck>
+								<MediaUpload
+									onSelect={ onSelectImage }
+									allowedTypes={ ['image'] }
+									value={ attributes.id }
+									render={ ({ open }) => (
+										<Button onClick={open}
+											variant='secondary'>
+												Select/Upload Image
+										</Button>
+									) }
+								/>
+							</MediaUploadCheck>
+						) }
+					</>
 				</PanelBody>
 			</InspectorControls>
 			
@@ -40,32 +79,20 @@ export default function Edit({ attributes, setAttributes }) {
 						<img
 							src={ attributes.url }
 							alt={ attributes.alt }
-							className={ `${attributes.options.classBaseName}__image` }
+							className={ `${attributes.classBaseName}__image` }
 						/>
-						<figcaption className={ `${attributes.options.classBaseName}__caption` }>
-							{ attributes.caption }
-						</figcaption>
-						<Button
-							onClick={ onRemoveImage }
-							className={ `${attributes.options.classBaseName}__remove-button` }
-							isDestructive>
-								Remove Image
-						</Button>
+						<RichText 
+							tagName="figcaption"
+							className={ `${attributes.classBaseName}__caption` }
+							onChange={ ( caption ) => setAttributes( { caption } ) }
+							value={ attributes.caption }
+							placeholder='Add a caption...'
+						/>
 					</>
 				) : (
-					<MediaUploadCheck>
-						<MediaUpload
-							onSelect={ onSelectImage }
-							allowedTypes={ ['image'] }
-							value={ attributes.id }
-							render={ ({ open }) => (
-								<Button onClick={open}
-									className={ `${attributes.options.classBaseName}__add-button` }>
-										Upload Image
-								</Button>
-							) }
-						/>
-					</MediaUploadCheck>
+					<p className={ `${attributes.classBaseName}__placeholder` }>
+						{ __( 'Select an image from the block panel to the right.', 'lichtberg' ) }
+					</p>
 				) }
 			</div>
 		</>

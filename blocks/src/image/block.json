@@ -17,32 +17,33 @@
 	"style": "file:./style-index.css",
 	"viewScript": "file:./view.js",
 	"attributes": {
-		"url": {
-			"type": "string",
-			"default": ""
-		},
 		"alt": {
 			"type": "string",
 			"default": ""
-		},
-		"id": {
-			"type": "number",
-			"default": 0
 		},
 		"caption": {
 			"type": "string",
 			"default": ""
 		},
+		"classBaseName": {
+			"type": "string",
+			"default": "wp-block-lichtberg-image"
+		},
+		"id": {
+			"type": "number",
+			"default": 0
+		},
 		"style": {
 			"type": "array",
 			"default": []
 		},
-		"options": {
-			"type": "object",
-			"default": {
-				"style": [],
-				"classBaseName": "wp-block-lichtberg-image"
-			}
+		"styleOptions": {
+			"type": "array",
+			"default": []
+		},
+		"url": {
+			"type": "string",
+			"default": ""
 		}
 	}
 }
