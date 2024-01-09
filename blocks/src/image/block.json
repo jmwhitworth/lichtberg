@@ -1,12 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lichtberg/text",
+	"name": "lichtberg/image",
 	"version": "0.1.0",
-	"title": "Text",
+	"title": "Image",
 	"category": "lichtberg",
-	"icon": "text",
-	"description": "Flexible text block for titles, text and shortcode.",
+	"icon": "format-image",
+	"description": "Image block to display media.",
 	"example": {},
 	"supports": {
 		"html": false
@@ -17,11 +17,19 @@
 	"style": "file:./style-index.css",
 	"viewScript": "file:./view.js",
 	"attributes": {
-		"tag": {
+		"url": {
 			"type": "string",
-			"default": "p"
+			"default": ""
 		},
-		"content": {
+		"alt": {
+			"type": "string",
+			"default": ""
+		},
+		"id": {
+			"type": "number",
+			"default": 0
+		},
+		"caption": {
 			"type": "string",
 			"default": ""
 		},
@@ -33,16 +41,7 @@
 			"type": "object",
 			"default": {
 				"style": [],
-				"classBaseName": "wp-block-lichtberg-text",
-				"tag": [
-					{"label": "Paragraph", "value": "p"},
-					{"label": "Heading 1", "value": "h1"},
-					{"label": "Heading 2", "value": "h2"},
-					{"label": "Heading 3", "value": "h3"},
-					{"label": "Heading 4", "value": "h4"},
-					{"label": "Heading 5", "value": "h5"},
-					{"label": "Heading 6", "value": "h6"}
-				]
+				"classBaseName": "wp-block-lichtberg-image"
 			}
 		}
 	}

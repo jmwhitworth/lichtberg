@@ -1,0 +1,19 @@
+.wp-block-lichtberg-image {
+    &__remove-button {
+        display: none;
+        position: absolute;
+        background-color: white;
+        top: 8px;
+        left: 8px;
+    }
+
+    &:hover {
+        .wp-block-lichtberg-image__remove-button {
+            display: block;
+        }
+    }
+
+    &__add-button {
+        border: solid 1px black;
+    }
+}

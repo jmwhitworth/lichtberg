@@ -2,31 +2,69 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "lichtberg/text",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "title": "Text",
   "category": "lichtberg",
   "icon": "text",
-  "description": "A text area block for text-based content",
-  "textdomain": "lichtbergggg",
+  "description": "Flexible text block for titles, text and shortcode.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "lichtberg",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
   "attributes": {
+    "tag": {
+      "type": "string",
+      "default": "p"
+    },
     "content": {
       "type": "string",
       "default": ""
     },
-    "placeholder": {
-      "type": "string",
-      "default": "Enter text..."
+    "style": {
+      "type": "array",
+      "default": []
     },
-    "tagType": {
-      "type": "string",
-      "default": "p"
-    },
-    "align": {
-      "type": "string",
-      "default": "left"
+    "options": {
+      "type": "object",
+      "default": {
+        "style": [],
+        "classBaseName": "wp-block-lichtberg-text",
+        "tag": [
+          {
+            "label": "Paragraph",
+            "value": "p"
+          },
+          {
+            "label": "Heading 1",
+            "value": "h1"
+          },
+          {
+            "label": "Heading 2",
+            "value": "h2"
+          },
+          {
+            "label": "Heading 3",
+            "value": "h3"
+          },
+          {
+            "label": "Heading 4",
+            "value": "h4"
+          },
+          {
+            "label": "Heading 5",
+            "value": "h5"
+          },
+          {
+            "label": "Heading 6",
+            "value": "h6"
+          }
+        ]
+      }
     }
-  },
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./index.css"
+  }
 }

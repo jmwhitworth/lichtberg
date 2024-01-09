@@ -1,51 +1,36 @@
-import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-editor';
+import { __ } from '@wordpress/i18n';
+import { useBlockProps, InspectorControls, RichText } from '@wordpress/block-editor';
 import { PanelBody, SelectControl } from '@wordpress/components';
+import { StylePanel, generateClasses } from '../lichtbergHelpers';
+import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps({
-		className: "text-base"
+		className: generateClasses(attributes.style, attributes.options.classBaseName)
 	});
- 
+	
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title="Block Settings">
+				<PanelBody title={ __( 'Block Settings', 'lichtberg') }>
+					<StylePanel attributes={ attributes } setAttributes={ setAttributes } />
 					<SelectControl
-						label="Select Tag Type"
-						value={attributes.tagType}
-						options={[
-							{ label: 'Paragraph (p)', value: 'p' },
-							{ label: 'Heading 1 (h1)', value: 'h1' },
-							{ label: 'Heading 2 (h2)', value: 'h2' },
-							{ label: 'Heading 3 (h3)', value: 'h3' },
-							{ label: 'Heading 4 (h4)', value: 'h4' },
-							{ label: 'Heading 5 (h5)', value: 'h5' },
-							{ label: 'Heading 6 (h6)', value: 'h6' },
-						]}
-						onChange={(tagType) => setAttributes({ tagType })}
-					/>
-					<SelectControl
-						label="Align text"
-						value={attributes.align}
-						options={[
-							{ label: 'Left', value: 'left' },
-							{ label: 'Center', value: 'center' },
-							{ label: 'Right', value: 'right' },
-							{ label: 'Justify', value: 'justify' },
-						]}
-						onChange={(align) => setAttributes({ align })}
+						label={ __( 'Tag', 'lichtberg' ) }
+						value={ attributes.tag }
+						options={ attributes.options.tag }
+						onChange={ ( value ) => setAttributes( { tag: value } ) }
 					/>
 				</PanelBody>
 			</InspectorControls>
-
+			
 			<RichText
-				{...blockProps}
-				tagName={attributes.tagType}
-				value={attributes.content}
-				style={{ textAlign: attributes.align }}
-				onChange={(content) => setAttributes({ content })}
-				placeholder={attributes.placeholder}
-			/>
+                { ...blockProps }
+                tagName={ attributes.tag }
+                value={ attributes.content }
+                allowedFormats={ [ 'core/bold', 'core/italic' ] }
+                onChange={ ( content ) => setAttributes( { content } ) }
+                placeholder={ __( 'Heading...', 'lichtberg' ) }
+            />
 		</>
 	);
 }

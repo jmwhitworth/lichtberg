@@ -1,4 +1,4 @@
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 import { generateClasses } from '../lichtbergHelpers';
 
 export default function save({ attributes }) {
@@ -7,10 +7,8 @@ export default function save({ attributes }) {
 	});
 	
 	return (
-		<RichText.Content
-			{ ...blockProps }
-			tagName={ attributes.tag }
-			value={ attributes.content }
-		/>
+		<div { ...blockProps }>
+			<InnerBlocks.Content />
+		</div>
 	);
 }

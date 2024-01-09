@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lichtberg/image",
+  "version": "0.1.0",
+  "title": "Image",
+  "category": "lichtberg",
+  "icon": "format-image",
+  "description": "Image block to display media.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "lichtberg",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "alt": {
+      "type": "string",
+      "default": ""
+    },
+    "id": {
+      "type": "number",
+      "default": 0
+    },
+    "caption": {
+      "type": "string",
+      "default": ""
+    },
+    "style": {
+      "type": "array",
+      "default": []
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "style": [],
+        "classBaseName": "wp-block-lichtberg-image"
+      }
+    }
+  }
+}
