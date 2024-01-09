@@ -9,3 +9,4 @@
         - shortcode
         - text
     - Setup styling so modifier classes can be added via PHP hooks for selection in the editor
+- v0.2.1: Updated README.md
