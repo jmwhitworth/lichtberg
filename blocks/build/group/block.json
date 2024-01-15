@@ -1,15 +1,15 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lichtberg/image",
+  "name": "lichtberg/group",
   "ancestor": [
-    "lichtberg/group"
+    "lichtberg/section"
   ],
   "version": "0.4.0",
-  "title": "Image",
+  "title": "Group",
   "category": "lichtberg",
-  "icon": "format-image",
-  "description": "Image block to display media.",
+  "icon": "grid-view",
+  "description": "A group block to encapsulate content.",
   "example": {},
   "supports": {
     "html": false
@@ -20,21 +20,9 @@
   "style": "file:./style-index.css",
   "viewScript": "file:./view.js",
   "attributes": {
-    "alt": {
-      "type": "string",
-      "default": ""
-    },
-    "caption": {
-      "type": "string",
-      "default": ""
-    },
     "classBaseName": {
       "type": "string",
-      "default": "wp-block-lichtberg-image"
-    },
-    "id": {
-      "type": "number",
-      "default": 0
+      "default": "wp-block-lichtberg-group"
     },
     "style": {
       "type": "array",
@@ -43,10 +31,6 @@
     "styleOptions": {
       "type": "array",
       "default": []
-    },
-    "url": {
-      "type": "string",
-      "default": ""
     }
   }
 }

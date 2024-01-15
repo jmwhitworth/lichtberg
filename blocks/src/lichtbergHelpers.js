@@ -1,6 +1,13 @@
 import { SelectControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
+export const ALL_BLOCKS = [
+    'lichtberg/group',
+    'lichtberg/image',
+    'lichtberg/shortcode',
+    'lichtberg/text'
+];
+
 export const StylePanel = ({ attributes, setAttributes }) => {
     return (
         <>

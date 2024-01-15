@@ -1,13 +1,13 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lichtberg/shortcode",
-	"ancestor": [ "lichtberg/group" ],
+	"name": "lichtberg/group",
+	"ancestor": [ "lichtberg/section" ],
 	"version": "0.4.0",
-	"title": "Shortcode",
+	"title": "Group",
 	"category": "lichtberg",
-	"icon": "shortcode",
-	"description": "Add shortcode within square brackets.",
+	"icon": "grid-view",
+	"description": "A group block to encapsulate content.",
 	"example": {},
 	"supports": {
 		"html": false
@@ -20,11 +20,7 @@
 	"attributes": {
 		"classBaseName": {
 			"type": "string",
-			"default": "wp-block-lichtberg-shortcode"
-		},
-		"content": {
-			"type": "string",
-			"default": "[]"
+			"default": "wp-block-lichtberg-group"
 		},
 		"style": {
 			"type": "array",
