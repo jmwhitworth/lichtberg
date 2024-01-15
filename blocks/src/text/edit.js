@@ -37,7 +37,7 @@ export default function Edit({ attributes, setAttributes }) {
                 value={ attributes.content }
                 allowedFormats={ [ 'core/bold', 'core/italic' ] }
                 onChange={ ( content ) => setAttributes( { content } ) }
-                placeholder={ __( 'Heading...', 'lichtberg' ) }
+                placeholder={ __( 'Your text...', 'lichtberg' ) }
             />
 		</>
 	);

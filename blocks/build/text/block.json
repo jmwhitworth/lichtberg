@@ -2,7 +2,10 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "lichtberg/text",
-  "version": "0.1.0",
+  "ancestor": [
+    "lichtberg/section"
+  ],
+  "version": "0.3.0",
   "title": "Text",
   "category": "lichtberg",
   "icon": "text",

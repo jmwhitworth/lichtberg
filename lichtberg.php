@@ -2,9 +2,9 @@
 /**
  * Plugin Name:       Lichtberg
  * Description:       A collection of lightweight blocks
- * Requires at least: 6.1
- * Requires PHP:      8.2
- * Version:           1.0.0
+ * Requires at least: 6.0
+ * Requires PHP:      8.0
+ * Version:           0.3.0
  * Author:            Jack Whitworth
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,6 @@
  *
  * @package           lichtberg
  */
-
 
 namespace lichtberg;
 
@@ -71,49 +70,18 @@ if ( !function_exists('\lichtberg\registerBlocks') ) {
 \add_action( 'init', '\lichtberg\registerBlocks' );
 
 
-/**
- * Allows only Lichtberg blocks to be used in the editor, see README.md for examples
- * @return array
- */
-function allowOnlyLichtbergBlocks(): array
-{
-    return [
-		'lichtberg/image',
-		'lichtberg/section',
-		'lichtberg/shortcode',
-		'lichtberg/text',
-    ];
-}
-
-
-/**
- * Change the style options for Lichtberg blocks
- * @return array
- */
-function changeBlockThemeOption($metadata): array
-{
-    switch ($metadata['name']) {
-        case 'lichtberg/section':
-            $metadata['attributes']['styleOptions']['default'] = [
-                [ 'label' => 'Dark', 'value' => 'dark' ]
-            ];
-            break;
-        case 'lichtberg/text':
-            $metadata['attributes']['styleOptions']['default'] = [
-                [ 'label' => 'Dark', 'value' => 'dark' ]
-            ];
-            break;
-        case 'lichtberg/shortcode':
-            $metadata['attributes']['styleOptions']['default'] = [
-                [ 'label' => 'Dark', 'value' => 'dark' ]
-            ];
-            break;
-        case 'lichtberg/image':
-            $metadata['attributes']['styleOptions']['default'] = [
-                [ 'label' => 'Dark', 'value' => 'dark' ]
-            ];
-            break;
+if ( !function_exists('\lichtberg\allBlockNames') ) {
+    /**
+     * Allows only Lichtberg blocks to be used in the editor, see README.md for examples
+     * @return array
+     */
+    function allBlockNames(): array
+    {
+        return [
+            'lichtberg/image',
+            'lichtberg/section',
+            'lichtberg/shortcode',
+            'lichtberg/text',
+        ];
     }
-    return $metadata;
 }
-\add_filter('block_type_metadata', '\lichtberg\changeBlockThemeOption', 10, 1);

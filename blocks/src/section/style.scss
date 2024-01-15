@@ -1,0 +1,14 @@
+.wp-block-lichtberg-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+    // Allows inner blocks to fill the space
+    > * {
+        width: 100%;
+    }
+    
+    &--style-horizontal {
+        flex-direction: row;
+    }
+}
