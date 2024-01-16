@@ -81,7 +81,7 @@ function changeBlockStyleOption($metadata): array
     }
     return $metadata;
 }
-add_filter('block_type_metadata', '\changeBlockStyleOption', 10, 1);
+add_filter('block_type_metadata', 'changeBlockStyleOption', 10, 1);
 ```
 
 If, for example, the `Vertical align center` style option from the above code was chosen on the Section block, the block would then get an additional class added to it based on the matching `value`: `wp-block-lichtberg-text--style-vertical-center`
