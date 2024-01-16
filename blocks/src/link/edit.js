@@ -1,13 +1,11 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls, useInnerBlocksProps } from '@wordpress/block-editor';
 import { PanelBody, TextControl, ToggleControl, SearchControl } from '@wordpress/components';
-import './editor.scss';
 
-import { ALL_BLOCKS } from '../contants';
-import StylePanel from '../components/StylePanel';
-import generateClasses from '../helpers/generateClasses';
-import CustomModal from '../components/CustomModal';
-import PostSelect from '../components/PostSelect';
+import { StylePanel, CustomModal, PostSelect } from '../components';
+import { generateClasses } from '../helpers';
+
+import './editor.scss';
 
 
 export default function Edit({ attributes, setAttributes }) {
@@ -16,7 +14,7 @@ export default function Edit({ attributes, setAttributes }) {
 	});
 	const innerBlocksProps = useInnerBlocksProps( blockProps, {
         templateInsertUpdatesSelection: true,
-		allowedBlocks: ALL_BLOCKS
+		allowedBlocks: []
     });
 	
 	return (

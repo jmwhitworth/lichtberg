@@ -1,5 +1,7 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import generateClasses from '../helpers/generateClasses';
+
+import { generateClasses } from '../helpers';
+
 
 export default function save({ attributes }) {
 	const blockProps = useBlockProps.save({

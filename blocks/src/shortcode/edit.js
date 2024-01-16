@@ -1,10 +1,11 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls, RichText, PlainText } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls, PlainText } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
-import './editor.scss';
 
-import StylePanel from '../components/StylePanel';
-import generateClasses from '../helpers/generateClasses';
+import { StylePanel } from '../components';
+import { generateClasses } from '../helpers';
+
+import './editor.scss';
 
 
 export default function Edit({ attributes, setAttributes }) {

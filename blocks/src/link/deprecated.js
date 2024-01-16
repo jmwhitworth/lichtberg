@@ -1,7 +1,8 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
-import metadata from './block.json';
 
-import generateClasses from '../helpers/generateClasses';
+import { generateClasses } from '../helpers';
+
+import metadata from './block.json';
 
 
 /**

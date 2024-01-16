@@ -27,9 +27,7 @@
 		},
 		"styleOptions": {
 			"type": "array",
-			"default": [
-				{ "label": "Horizontal", "value": "horizontal" }
-			]
+			"default": []
 		}
 	}
 }

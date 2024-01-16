@@ -1,0 +1,34 @@
+{
+	"version": "0.5.0",
+	"category": "lichtberg",
+	"textdomain": "lichtberg",
+    "attributes": {
+        "style": {
+            "type": "array",
+            "default": []
+        },
+        "styleOptions": {
+            "type": "array",
+            "default": [
+                { "label": "Button", "value": "button" }
+            ]
+        }
+    },
+    
+    "allBlocks": [
+        "lichtberg/group",
+        "lichtberg/image",
+        "lichtberg/link",
+        "lichtberg/section",
+        "lichtberg/shortcode",
+        "lichtberg/text"
+    ],
+    
+    "nestableBlocks": [
+        "lichtberg/group",
+        "lichtberg/image",
+        "lichtberg/link",
+        "lichtberg/shortcode",
+        "lichtberg/text"
+    ]
+}

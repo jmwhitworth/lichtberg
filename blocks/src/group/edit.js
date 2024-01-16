@@ -1,11 +1,12 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls, useInnerBlocksProps } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
+
+import { StylePanel } from '../components';
+import { nestableBlocks, generateClasses } from '../helpers';
+
 import './editor.scss';
 
-import { ALL_BLOCKS } from '../contants';
-import StylePanel from '../components/StylePanel';
-import generateClasses from '../helpers/generateClasses';
 
 
 export default function Edit({ attributes, setAttributes }) {
@@ -14,7 +15,7 @@ export default function Edit({ attributes, setAttributes }) {
 	});
 	const innerBlocksProps = useInnerBlocksProps( blockProps, {
         templateInsertUpdatesSelection: true,
-		allowedBlocks: ALL_BLOCKS
+		allowedBlocks: nestableBlocks()
     });
 	
 	return (
