@@ -1,0 +1,72 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lichtberg/link",
+  "ancestor": [
+    "lichtberg/group"
+  ],
+  "version": "0.5.0",
+  "title": "Link",
+  "category": "lichtberg",
+  "icon": "admin-links",
+  "description": "A link block to add links to encapsulated content.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "lichtberg",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "classBaseName": {
+      "type": "string",
+      "default": "wp-block-lichtberg-link"
+    },
+    "style": {
+      "type": "array",
+      "default": []
+    },
+    "styleOptions": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Button",
+          "value": "button"
+        }
+      ]
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "alt": {
+      "type": "string",
+      "default": ""
+    },
+    "ariaLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "selectionPostTypes": {
+      "type": "array",
+      "default": [
+        "page",
+        "post"
+      ]
+    },
+    "searchInput": {
+      "type": "string",
+      "default": ""
+    },
+    "searchResultsPerPage": {
+      "type": "integer",
+      "default": 10
+    }
+  }
+}

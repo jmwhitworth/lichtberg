@@ -4,7 +4,7 @@
  * Description:       A collection of lightweight blocks
  * Requires at least: 6.0
  * Requires PHP:      8.0
- * Version:           0.4.0
+ * Version:           0.5.0
  * Author:            Jack Whitworth
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -54,6 +54,7 @@ if ( !function_exists('\lichtberg\registerBlocks') ) {
         $blocks = [
             'group' => '',
             'image' => '',
+            'link' => '',
             'section' => '',
             'shortcode' => '',
             'text' => '',
@@ -81,8 +82,9 @@ if ( !function_exists('\lichtberg\allBlockNames') ) {
         return [
             'lichtberg/group',
             'lichtberg/image',
+            'lichtberg/link',
             'lichtberg/section',
-            'lichtberg/shortcode',
+            'lichtberg/shortcode',  
             'lichtberg/text',
         ];
     }

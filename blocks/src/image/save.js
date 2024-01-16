@@ -1,5 +1,5 @@
 import { useBlockProps } from '@wordpress/block-editor';
-import { generateClasses } from '../lichtbergHelpers';
+import generateClasses from '../helpers/generateClasses';
 
 export default function save({ attributes }) {
 	const blockProps = useBlockProps.save({

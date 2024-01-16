@@ -3,10 +3,10 @@
 	"apiVersion": 3,
 	"name": "lichtberg/group",
 	"ancestor": [ "lichtberg/section" ],
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"title": "Group",
 	"category": "lichtberg",
-	"icon": "grid-view",
+	"icon": "screenoptions",
 	"description": "A group block to encapsulate content.",
 	"example": {},
 	"supports": {

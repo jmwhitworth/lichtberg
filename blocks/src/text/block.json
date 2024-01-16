@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "lichtberg/text",
 	"ancestor": [ "lichtberg/group" ],
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"title": "Text",
 	"category": "lichtberg",
 	"icon": "text",

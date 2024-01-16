@@ -13,3 +13,8 @@
 - v0.2.2: Change option attribute structure and added alignment controls for text block and caption/alt control over image block.
 - v0.3.0: Finished basic Section functionality. Fixed editor styling for consistency on spacing. Added default layout styling for Section block.
 - v0.4.0: Added Group block.
+- v0.5.0: Changes:
+    - Added Link block:
+        - Added migration to help resolve issues where SEO plugins add `rel:"noopener"` on the front end
+    - Split components and helpers into dedicated files
+    - Fixed imports for new structure

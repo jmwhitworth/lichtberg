@@ -1,8 +1,11 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls, RichText, PlainText } from '@wordpress/block-editor';
-import { PanelBody, SelectControl } from '@wordpress/components';
-import { StylePanel, generateClasses } from '../lichtbergHelpers';
+import { PanelBody } from '@wordpress/components';
 import './editor.scss';
+
+import StylePanel from '../components/StylePanel';
+import generateClasses from '../helpers/generateClasses';
+
 
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps({
